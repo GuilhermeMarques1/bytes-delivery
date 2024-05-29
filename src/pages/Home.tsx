@@ -1,4 +1,4 @@
-import { Button, Flex, Heading, RadioGroup, Stack } from '@chakra-ui/react'
+import { Button, Flex, Heading } from '@chakra-ui/react'
 import { useNavigate } from 'react-router-dom'
 
 import { Header } from '../components/Header'
@@ -54,13 +54,11 @@ export function Home() {
           Adicionar Endereço
         </Button>
 
-        <RadioGroup>
-          <Stack direction="column">
-            {addresses.map((address) => (
-              <AddressBox key={address.name} address={address} />
-            ))}
-          </Stack>
-        </RadioGroup>
+        <Flex direction="column">
+          {addresses.map((address) => (
+            <AddressBox key={address.name} address={address} />
+          ))}
+        </Flex>
       </Flex>
     </>
   )

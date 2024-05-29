@@ -6,7 +6,6 @@ import {
   Flex,
   Heading,
   Image,
-  Radio,
   Text,
 } from '@chakra-ui/react'
 
@@ -32,7 +31,6 @@ export function AddressBox({ address }: AddressProps) {
       p={4}
       mb="4"
     >
-      <Radio value="endereco1" pos="absolute" right="18" />
       <Flex mr="8">
         <Image
           boxSize="100px"
@@ -89,7 +87,6 @@ export function AddressBox({ address }: AddressProps) {
       p={4}
       mb="4"
     >
-      <Radio value="endereco1" pos="absolute" right="18" />
       <Flex mr="8">
         <Image
           boxSize="100px"
