@@ -1,4 +1,4 @@
-import { Flex, Heading } from '@chakra-ui/react'
+import { Flex, Heading, RadioGroup, Stack } from '@chakra-ui/react'
 
 import { Header } from '../components/Header'
 import { AddressBox } from '../components/AddressBox'
@@ -18,9 +18,12 @@ export function Home() {
           Endereços
         </Heading>
 
-        <Flex>
-          <AddressBox />
-        </Flex>
+        <RadioGroup>
+          <Stack direction="column">
+            <AddressBox />
+            <AddressBox />
+          </Stack>
+        </RadioGroup>
       </Flex>
     </>
   )

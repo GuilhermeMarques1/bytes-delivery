@@ -5,25 +5,30 @@ import {
   Flex,
   Heading,
   Image,
+  Radio,
   Text,
 } from '@chakra-ui/react'
+
+import earthImg from '../assets/earth.png'
 
 export function AddressBox() {
   return (
     <Flex
+      pos="relative"
       direction="row"
-      w="80vw"
       border="1px solid"
       borderColor="blue.900"
       borderRadius="12px"
       p={4}
+      mb="4"
     >
+      <Radio value="endereco1" pos="absolute" right="18" />
       <Flex mr="8">
         <Image
           boxSize="100px"
           borderRadius="12px"
           margin="2px"
-          src="https://previews.123rf.com/images/hironicons/hironicons2005/hironicons200500085/147291149-well-organized-and-fully-editable-earth-globe-icon-map-address-location-for-any-use-like-print-media.jpg"
+          src={earthImg}
           alt="Location image"
         />
       </Flex>
