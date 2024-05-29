@@ -17,7 +17,7 @@ export function Header() {
         fontWeight="bold"
         letterSpacing="tight"
         w="64"
-        color="blue.100"
+        color="gray.100"
       >
         BYTES
         <Text color="black.900" ml="0.8" as="span">
@@ -33,9 +33,9 @@ export function Header() {
         ml="6"
         maxW="400"
         alignSelf="center"
-        color="blue.300"
+        color="gray.300"
         position="relative"
-        bg="blue.50"
+        bg="white.50"
         borderRadius="full"
       >
         <Input
@@ -66,9 +66,9 @@ export function Header() {
         </HStack>
 
         <Flex align="center">
-          <Box mr="4" textAlign="right" color="blue.100">
+          <Box mr="4" textAlign="right" color="gray.100">
             <Text>Guilherme Marques</Text>
-            <Text color="blue.300" fontSize="small">
+            <Text color="gray.300" fontSize="small">
               g-marques@outlook.com
             </Text>
           </Box>
