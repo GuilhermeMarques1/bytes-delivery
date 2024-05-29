@@ -5,10 +5,7 @@ import {
   Button,
   FormControl,
   FormLabel,
-  Input,
   Select,
-  Stack,
-  Textarea,
   VStack,
   Badge,
 } from '@chakra-ui/react'
@@ -16,6 +13,7 @@ import React, { useState } from 'react'
 
 import { Header } from '../components/Header'
 import { BackButton } from '../components/BackButton'
+import { AddressForm } from '../components/AddressForm'
 
 export function CreateAddress() {
   const [type, setType] = useState('terra')
@@ -31,17 +29,6 @@ export function CreateAddress() {
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault()
 
-    console.log({
-      type,
-      name,
-      phoneNumber,
-      description,
-      country,
-      state,
-      city,
-      zipCode,
-    })
-
     setType('terra')
     setName('')
     setPhoneNumber('')
@@ -50,6 +37,7 @@ export function CreateAddress() {
     setState('')
     setCity('')
     setZipCode('')
+    setLote('')
   }
 
   return (
@@ -91,93 +79,25 @@ export function CreateAddress() {
                 </Select>
               </FormControl>
 
-              <Stack direction={{ base: 'column', md: 'row' }} spacing={4}>
-                <FormControl id="name">
-                  <FormLabel>Nome do Endereço:</FormLabel>
-                  <Input
-                    type="text"
-                    value={name}
-                    onChange={(e) => setName(e.target.value)}
-                  />
-                </FormControl>
-                <FormControl id="phoneNumber">
-                  <FormLabel>Número de Telefone:</FormLabel>
-                  <Input
-                    type="tel"
-                    value={phoneNumber}
-                    onChange={(e) => setPhoneNumber(e.target.value)}
-                  />
-                </FormControl>
-              </Stack>
-
-              {type === 'terra' ? (
-                <>
-                  <FormControl id="address">
-                    <FormLabel>Endereço:</FormLabel>
-                    <Textarea
-                      value={description}
-                      onChange={(e) => setDescription(e.target.value)}
-                      placeholder="Digite o endereço completo"
-                      size="sm"
-                      resize="none"
-                    />
-                  </FormControl>
-
-                  <Stack direction={{ base: 'column', md: 'row' }} spacing={4}>
-                    <FormControl id="country">
-                      <FormLabel>País:</FormLabel>
-                      <Input
-                        type="text"
-                        value={country}
-                        onChange={(e) => setCountry(e.target.value)}
-                      />
-                    </FormControl>
-                    <FormControl id="state">
-                      <FormLabel>Estado:</FormLabel>
-                      <Input
-                        type="text"
-                        value={state}
-                        onChange={(e) => setState(e.target.value)}
-                      />
-                    </FormControl>
-                  </Stack>
-
-                  <Stack direction={{ base: 'column', md: 'row' }} spacing={4}>
-                    <FormControl id="city">
-                      <FormLabel>Cidade:</FormLabel>
-                      <Input
-                        type="text"
-                        value={city}
-                        onChange={(e) => setCity(e.target.value)}
-                      />
-                    </FormControl>
-                    <FormControl id="zipCode">
-                      <FormLabel>CEP:</FormLabel>
-                      <Input
-                        type="text"
-                        value={zipCode}
-                        onChange={(e) => setZipCode(e.target.value)}
-                      />
-                    </FormControl>
-                  </Stack>
-                </>
-              ) : (
-                <Box m="auto">
-                  <FormControl id="lote">
-                    <FormLabel>Lote:</FormLabel>
-                    <Input
-                      borderRadius="8"
-                      type="text"
-                      value={lote}
-                      onChange={(e) => setLote(e.target.value)}
-                      placeholder="Infome o lote"
-                      maxLength={4}
-                      pattern="[0-9]*"
-                      size="sm"
-                    />
-                  </FormControl>
-                </Box>
-              )}
+              <AddressForm
+                name={name}
+                setName={setName}
+                phoneNumber={phoneNumber}
+                setPhoneNumber={setPhoneNumber}
+                type={type}
+                description={description}
+                setDescription={setDescription}
+                country={country}
+                setCountry={setCountry}
+                state={state}
+                setState={setState}
+                city={city}
+                setCity={setCity}
+                lote={lote}
+                setLote={setLote}
+                zipCode={zipCode}
+                setZipCode={setZipCode}
+              />
 
               <Button
                 mt="4rem"
