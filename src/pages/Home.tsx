@@ -21,7 +21,7 @@ const addresses: Address[] = [
     type: 'marte',
     name: 'Endereço 2',
     phoneNumber: '(11) 1234-6789',
-    lote: 1234,
+    lote: '1234',
   },
 ]
 

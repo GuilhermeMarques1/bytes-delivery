@@ -13,7 +13,7 @@ export type MarsAddress = {
   type: 'marte'
   name: string
   phoneNumber: string
-  lote: number
+  lote: string
 }
 
 export type Address = EarthAddress | MarsAddress
