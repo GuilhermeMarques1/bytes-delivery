@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom'
 import {
   Badge,
   Box,
@@ -12,6 +13,8 @@ import {
 import earthImg from '../assets/earth.png'
 
 export function AddressBox() {
+  const navigate = useNavigate()
+
   return (
     <Flex
       pos="relative"
@@ -51,7 +54,13 @@ export function AddressBox() {
         </Flex>
 
         <Flex margin="auto">
-          <Button border="1px solid" borderColor="gray.300" mt="2" mr="2">
+          <Button
+            onClick={() => navigate('/editaddress/1')}
+            border="1px solid"
+            borderColor="gray.300"
+            mt="2"
+            mr="2"
+          >
             Editar
           </Button>
           <Button border="1px solid" borderColor="gray.300" mt="2" ml="2">
