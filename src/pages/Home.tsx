@@ -1,4 +1,4 @@
-import { Flex, Heading, RadioGroup, Stack } from '@chakra-ui/react'
+import { Button, Flex, Heading, RadioGroup, Stack } from '@chakra-ui/react'
 
 import { Header } from '../components/Header'
 import { AddressBox } from '../components/AddressBox'
@@ -8,6 +8,7 @@ export function Home() {
     <>
       <Header />
       <Flex
+        pos="relative"
         w="60%"
         direction="column"
         alignSelf="center"
@@ -17,6 +18,16 @@ export function Home() {
         <Heading as="h1" size="lg" marginBottom="3rem">
           Endereços
         </Heading>
+
+        <Button
+          pos="absolute"
+          right="2"
+          border="1px solid"
+          borderColor="blue.900"
+          color="blue.900"
+        >
+          Adicionar Endereço
+        </Button>
 
         <RadioGroup>
           <Stack direction="column">
