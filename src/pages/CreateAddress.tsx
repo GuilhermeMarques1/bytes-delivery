@@ -155,7 +155,13 @@ export function CreateAddress() {
                 </FormControl>
               </Stack>
 
-              <Button mt="4rem" bg="blue.900" color="white.100" type="submit">
+              <Button
+                mt="4rem"
+                bg="blue.900"
+                color="white.100"
+                type="submit"
+                _hover={{ bg: 'blue.800' }}
+              >
                 Salvar Endereço
               </Button>
             </VStack>
