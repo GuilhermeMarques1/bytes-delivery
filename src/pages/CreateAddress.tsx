@@ -53,7 +53,7 @@ export function CreateAddress() {
 
   return (
     <>
-      <Header></Header>
+      <Header />
       <Flex
         w="60%"
         direction="column"
