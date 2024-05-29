@@ -10,7 +10,7 @@ export function AppRoutes() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/newaddress" element={<CreateAddress />} />
-        <Route path="/editaddress/:id" element={<EditAddress />} />
+        <Route path="/editaddress" element={<EditAddress />} />
       </Routes>
     </BrowserRouter>
   )

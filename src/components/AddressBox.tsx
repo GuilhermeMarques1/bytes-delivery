@@ -65,7 +65,7 @@ export function AddressBox({ address }: AddressProps) {
 
         <Flex margin="auto">
           <Button
-            onClick={() => navigate('/editaddress/1')}
+            onClick={() => navigate('/editaddress', { state: { address } })}
             border="1px solid"
             borderColor="gray.300"
             mt="2"
@@ -119,7 +119,7 @@ export function AddressBox({ address }: AddressProps) {
 
         <Flex margin="auto">
           <Button
-            onClick={() => navigate('/editaddress/1')}
+            onClick={() => navigate('/editaddress', { state: { address } })}
             border="1px solid"
             borderColor="gray.300"
             mt="2"
