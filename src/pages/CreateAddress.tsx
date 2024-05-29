@@ -15,6 +15,7 @@ import {
 import React, { useState } from 'react'
 
 import { Header } from '../components/Header'
+import { BackButton } from '../components/BackButton'
 
 export function CreateAddress() {
   const [option, setOption] = useState('terra')
@@ -60,6 +61,8 @@ export function CreateAddress() {
         margin="auto"
         marginTop="2rem"
       >
+        <BackButton />
+
         <Heading as="h1" size="lg" marginBottom="2rem">
           Criar novo endereço
         </Heading>
