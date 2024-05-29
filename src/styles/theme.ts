@@ -32,4 +32,12 @@ export const theme = extendTheme({
       },
     },
   },
+  components: {
+    FormLabel: {
+      baseStyle: {
+        color: 'black.900',
+        fontSize: 'lg',
+      },
+    },
+  },
 })
