@@ -17,6 +17,8 @@ import { AddressForm } from '../components/AddressForm'
 
 import { Address } from '../types/IAddress'
 
+type AddressType = 'terra' | 'marte'
+
 export function EditAddress() {
   const location = useLocation()
   const address: Address = location.state?.address
@@ -86,7 +88,10 @@ export function EditAddress() {
             <VStack spacing={4} align="stretch">
               <FormControl id="option">
                 <FormLabel>Para:</FormLabel>
-                <Select value={type} onChange={(e) => setType(e.target.value)}>
+                <Select
+                  value={type}
+                  onChange={(e) => setType(e.target.value as AddressType)}
+                >
                   <option value="terra">Terra</option>
                   <option value="marte">Marte</option>
                 </Select>
